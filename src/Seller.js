@@ -5,12 +5,12 @@ import {useState} from "react";
 const Seller = () => {
     const location = useLocation()
     const { msgToSeller } = location.state
-    const [name, setName] = useState("");
+    const [page, setPage] = useState("");
     const [isLogin, setIsLogin] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (name === 'Saleh')
+        if (page === 'login')
         {
             setIsLogin(true);
 
@@ -24,11 +24,11 @@ const Seller = () => {
             {msgToSeller}<br/>
 
             <form onSubmit={handleSubmit}>
-                <label>Enter your name:
+                <label>Enter "login" to navigate to login page:
                     <input
                         type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        value={page}
+                        onChange={(e) => setPage(e.target.value)}
                     />
                 </label>
                 <input type="submit" />
