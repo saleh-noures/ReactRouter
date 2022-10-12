@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import { useLocation, useNavigate, Navigate  } from 'react-router-dom';
+import { useLocation, useNavigate, navigate  } from 'react-router-dom';
 import {useState} from "react";
 
 const Seller = () => {
